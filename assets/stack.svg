@@ -1,14 +1,14 @@
 <svg width="1000" height="350" viewBox="0 0 1000 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Component schedule — Rust, Python, Go, Kotlin, eBPF, Kubernetes, CRDT, Ed25519, zkVM, PostgreSQL">
   <defs>
     <pattern id="g6" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M28 0H0V28" fill="none" stroke="#1D1219" stroke-width="1"/>
+      <path d="M28 0H0V28" fill="none" stroke="#331111" stroke-width="1"/>
     </pattern>
     <style>
       .lbl  { font-family:'Segoe UI',Helvetica,Arial,sans-serif; }
       .data { font-family:'SF Mono',Consolas,'Cascadia Code',monospace; }
-      .cat  { font-family:'SF Mono',Consolas,'Cascadia Code',monospace; font-size:10.5px; fill:#95757F; letter-spacing:1.4px; }
-      .val  { font-family:'Segoe UI',Helvetica,Arial,sans-serif; font-size:13px; fill:#D2B7C0; }
-      .sep  { fill:#743E50; }
+      .cat  { font-family:'SF Mono',Consolas,'Cascadia Code',monospace; font-size:10.5px; fill:#AE686A; letter-spacing:1.4px; }
+      .val  { font-family:'Segoe UI',Helvetica,Arial,sans-serif; font-size:13px; fill:#DCAFB1; }
+      .sep  { fill:#93343A; }
 
       @keyframes tick    { 0%,10%,100%{ opacity:1; } 5%{ opacity:.2; } }
       @keyframes breathe { 0%,100%{ opacity:.45; } 50%{ opacity:1; } }
@@ -34,28 +34,28 @@
       @media (prefers-reduced-motion: reduce) { *{ animation:none !important; } }
     </style>
     <radialGradient id="sglow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#C81E45" stop-opacity="0.16"/>
-      <stop offset="0.62" stop-color="#C81E45" stop-opacity="0"/>
+      <stop offset="0" stop-color="#8E1219" stop-opacity="0.26"/>
+      <stop offset="0.62" stop-color="#8E1219" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <rect width="1000" height="350" fill="#0B0709"/>
+  <rect width="1000" height="350" fill="#1E0A0A"/>
   <rect width="1000" height="350" fill="url(#g6)"/>
   <ellipse class="wash" cx="880" cy="300" rx="440" ry="440" fill="url(#sglow)"/>
-  <rect x="0.5" y="0.5" width="999" height="349" fill="none" stroke="#33202A"/>
+  <rect x="0.5" y="0.5" width="999" height="349" fill="none" stroke="#4A1A1C"/>
 
-  <text x="32" y="38" class="data" font-size="10.5" fill="#856872" letter-spacing="3">05 — COMPONENT SCHEDULE</text>
-  <text x="32" y="60" class="lbl" font-size="18" font-weight="700" fill="#F8EFF2">Stack</text>
-  <text x="32" y="80" class="lbl" font-size="12" fill="#BCA0AA">what the systems above are actually built out of</text>
+  <text x="32" y="38" class="data" font-size="10.5" fill="#9E5A5C" letter-spacing="3">05 — COMPONENT SCHEDULE</text>
+  <text x="32" y="60" class="lbl" font-size="18" font-weight="700" fill="#FBEFEE">Stack</text>
+  <text x="32" y="80" class="lbl" font-size="12" fill="#CB979A">what the systems above are actually built out of</text>
 
   <!-- Row highlights sweep top to bottom, one row at a time, behind the text. -->
-  <rect class="h1" x="32" y="130" width="936" height="30" fill="#C81E45" opacity="0"/>
-  <rect class="h2" x="32" y="160" width="936" height="30" fill="#C81E45" opacity="0"/>
-  <rect class="h3" x="32" y="190" width="936" height="30" fill="#C81E45" opacity="0"/>
-  <rect class="h4" x="32" y="220" width="936" height="30" fill="#C81E45" opacity="0"/>
-  <rect class="h5" x="32" y="250" width="936" height="30" fill="#C81E45" opacity="0"/>
+  <rect class="h1" x="32" y="130" width="936" height="30" fill="#C8161D" opacity="0"/>
+  <rect class="h2" x="32" y="160" width="936" height="30" fill="#C8161D" opacity="0"/>
+  <rect class="h3" x="32" y="190" width="936" height="30" fill="#C8161D" opacity="0"/>
+  <rect class="h4" x="32" y="220" width="936" height="30" fill="#C8161D" opacity="0"/>
+  <rect class="h5" x="32" y="250" width="936" height="30" fill="#C8161D" opacity="0"/>
 
-  <g stroke="#33202A" stroke-width="1" fill="none">
+  <g stroke="#4A1A1C" stroke-width="1" fill="none">
     <rect x="32" y="104" width="936" height="176"/>
     <line x1="32" y1="130" x2="968" y2="130"/>
     <line x1="32" y1="160" x2="968" y2="160"/>
@@ -66,47 +66,47 @@
     <line x1="268" y1="104" x2="268" y2="280"/>
   </g>
 
-  <g class="data" font-size="9.5" fill="#856872" letter-spacing="2">
+  <g class="data" font-size="9.5" fill="#9E5A5C" letter-spacing="2">
     <text x="46" y="122">REF</text>
     <text x="110" y="122">CATEGORY</text>
     <text x="282" y="122">COMPONENTS</text>
   </g>
 
-  <rect class="t1" x="38" y="139" width="3" height="13" fill="#C81E45"/>
-  <text x="50" y="150" class="data" font-size="10" fill="#95757F">01</text>
+  <rect class="t1" x="38" y="139" width="3" height="13" fill="#C8161D"/>
+  <text x="50" y="150" class="data" font-size="10" fill="#AE686A">01</text>
   <text x="110" y="150" class="cat">LANGUAGES</text>
   <text x="282" y="150" class="val">Rust <tspan class="sep">·</tspan> Python <tspan class="sep">·</tspan> Go <tspan class="sep">·</tspan> Kotlin</text>
 
-  <rect class="t2" x="38" y="169" width="3" height="13" fill="#C81E45"/>
-  <text x="50" y="180" class="data" font-size="10" fill="#95757F">02</text>
+  <rect class="t2" x="38" y="169" width="3" height="13" fill="#C8161D"/>
+  <text x="50" y="180" class="data" font-size="10" fill="#AE686A">02</text>
   <text x="110" y="180" class="cat">KERNEL</text>
   <text x="282" y="180" class="val">eBPF (Aya) <tspan class="sep">·</tspan> LSM hooks <tspan class="sep">·</tspan> tracepoints <tspan class="sep">·</tspan> Linux <tspan class="sep">·</tspan> Docker / OCI <tspan class="sep">·</tspan> Kubernetes</text>
 
-  <rect class="t3" x="38" y="199" width="3" height="13" fill="#C81E45"/>
-  <text x="50" y="210" class="data" font-size="10" fill="#95757F">03</text>
+  <rect class="t3" x="38" y="199" width="3" height="13" fill="#C8161D"/>
+  <text x="50" y="210" class="data" font-size="10" fill="#AE686A">03</text>
   <text x="110" y="210" class="cat">DISTRIBUTED</text>
   <text x="282" y="210" class="val">Gossip <tspan class="sep">·</tspan> CRDT <tspan class="sep">·</tspan> SWIM <tspan class="sep">·</tspan> P2P <tspan class="sep">·</tspan> NAT traversal <tspan class="sep">·</tspan> BLE mesh</text>
 
-  <rect class="t4" x="38" y="229" width="3" height="13" fill="#C81E45"/>
-  <text x="50" y="240" class="data" font-size="10" fill="#95757F">04</text>
+  <rect class="t4" x="38" y="229" width="3" height="13" fill="#C8161D"/>
+  <text x="50" y="240" class="data" font-size="10" fill="#AE686A">04</text>
   <text x="110" y="240" class="cat">CRYPTOGRAPHY</text>
   <text x="282" y="240" class="val">Ed25519 <tspan class="sep">·</tspan> AES-256-GCM <tspan class="sep">·</tspan> HMAC-SHA <tspan class="sep">·</tspan> SHA-256 commitments <tspan class="sep">·</tspan> SP1 zkVM</text>
 
-  <rect class="t5" x="38" y="259" width="3" height="13" fill="#C81E45"/>
-  <text x="50" y="270" class="data" font-size="10" fill="#95757F">05</text>
+  <rect class="t5" x="38" y="259" width="3" height="13" fill="#C8161D"/>
+  <text x="50" y="270" class="data" font-size="10" fill="#AE686A">05</text>
   <text x="110" y="270" class="cat">DATA</text>
   <text x="282" y="270" class="val">PostgreSQL <tspan class="sep">·</tspan> MySQL <tspan class="sep">·</tspan> MongoDB <tspan class="sep">·</tspan> FastAPI <tspan class="sep">·</tspan> S3</text>
 
   <g>
-    <rect x="782" y="296" width="186" height="42" fill="none" stroke="#33202A" stroke-width="1"/>
-    <line x1="782" y1="310" x2="968" y2="310" stroke="#33202A" stroke-width="1"/>
-    <text x="790" y="306" class="data" font-size="9" fill="#856872">DWG NO.</text>
-    <text x="960" y="306" class="data" font-size="9" fill="#BCA0AA" text-anchor="end">KC-030</text>
-    <text x="790" y="324" class="data" font-size="9" fill="#856872">SCHEDULE</text>
-    <text x="960" y="324" class="data" font-size="9" fill="#BCA0AA" text-anchor="end">STACK · REV 07.26</text>
+    <rect x="782" y="296" width="186" height="42" fill="none" stroke="#4A1A1C" stroke-width="1"/>
+    <line x1="782" y1="310" x2="968" y2="310" stroke="#4A1A1C" stroke-width="1"/>
+    <text x="790" y="306" class="data" font-size="9" fill="#9E5A5C">DWG NO.</text>
+    <text x="960" y="306" class="data" font-size="9" fill="#CB979A" text-anchor="end">KC-030</text>
+    <text x="790" y="324" class="data" font-size="9" fill="#9E5A5C">SCHEDULE</text>
+    <text x="960" y="324" class="data" font-size="9" fill="#CB979A" text-anchor="end">STACK · REV 07.26</text>
   </g>
 
-  <g stroke="#5E3746" stroke-width="1.25">
+  <g stroke="#7A2A2D" stroke-width="1.25">
     <path class="reg" d="M20 12 h14 M12 20 v14" fill="none"/>
     <path class="reg" d="M980 12 h-14 M988 20 v14" fill="none"/>
     <path class="reg" d="M20 338 h14 M12 330 v-14" fill="none"/>

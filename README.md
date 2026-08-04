@@ -64,7 +64,7 @@ I'm open to systems and infrastructure work — Rust services, kernel and networ
 
 <div align="center">
 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=kadircanyildirm-crypto.readme&title=PROFILE%20VIEWS&left_color=%231D1219&right_color=%23C81E45" alt="Profile views" height="30"/>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=kadircanyildirm-crypto.readme&title=PROFILE%20VIEWS&left_color=%23331111&right_color=%23C8161D" alt="Profile views" height="30"/>
 
 <img src="assets/footer.svg" alt="Drawing set KC-001 to KC-040 · revision 2026.07 · Anadolu University" width="100%"/>
 
