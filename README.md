@@ -56,6 +56,18 @@ From explainable-AI middleware to UDP-based WAN file transfer, the through-line 
 
 <br/>
 
+<div align="center">
+<img src="assets/upstream.svg" alt="Upstream record — eight patches merged into NASA F´, NASA spacewasm and CERN CernVM-FS" width="100%"/>
+</div>
+
+Eight patches merged into code other people's missions depend on: build-system correctness in **F´**, the NASA flight software framework flown on the Ingenuity Mars helicopter; host-interface and build fixes in **spacewasm**, NASA's flight-compliant WebAssembly interpreter; and a toolchain-discovery fix in **CernVM-FS**, the filesystem CERN uses to distribute LHC experiment software to computing sites worldwide. Reading an unfamiliar build system until the failure is obvious is the same work as reading a kernel path — only with a stricter review queue. More are in review.
+
+**[nasa/fprime](https://github.com/nasa/fprime)** · [#5590](https://github.com/nasa/fprime/pull/5590) · [#5576](https://github.com/nasa/fprime/pull/5576) · [#5571](https://github.com/nasa/fprime/pull/5571) · [#5559](https://github.com/nasa/fprime/pull/5559)<br/>
+**[nasa/spacewasm](https://github.com/nasa/spacewasm)** · [#154](https://github.com/nasa/spacewasm/pull/154) · [#153](https://github.com/nasa/spacewasm/pull/153) · [#152](https://github.com/nasa/spacewasm/pull/152)<br/>
+**[cvmfs/cvmfs](https://github.com/cvmfs/cvmfs)** · [#4392](https://github.com/cvmfs/cvmfs/pull/4392)
+
+<br/>
+
 I'm open to systems and infrastructure work — Rust services, kernel and network-level tooling, distributed architecture, and security engineering. If you need help or know someone who does, I'd appreciate an introduction.
 
 `kadir.can.yildirm@gmail.com`
@@ -66,6 +78,6 @@ I'm open to systems and infrastructure work — Rust services, kernel and networ
 
 <img src="https://visitor-badge.laobi.icu/badge?page_id=kadircanyildirm-crypto.readme&title=PROFILE%20VIEWS&left_color=%231D1219&right_color=%23C81E45" alt="Profile views" height="30"/>
 
-<img src="assets/footer.svg" alt="Drawing set KC-001 to KC-040 · revision 2026.07 · Anadolu University" width="100%"/>
+<img src="assets/footer.svg" alt="Drawing set KC-001 to KC-050 · revision 2026.08 · Anadolu University" width="100%"/>
 
 </div>
