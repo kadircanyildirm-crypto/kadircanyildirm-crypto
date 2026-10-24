@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Kadir Can Yıldırım — Systems Engineer, Rust, kernel-level and distributed infrastructure" width="100%"/>
+<img src="assets/hero.svg" alt="Kadir Can Yıldırım — Backend &amp; Systems Engineer · AI Specialist" width="100%"/>
 
 <img src="assets/status.svg" alt="Currently building wardyn" width="100%"/>
 
