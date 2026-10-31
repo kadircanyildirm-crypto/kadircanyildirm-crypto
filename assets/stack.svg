@@ -23,7 +23,7 @@
   <ellipse cx="880" cy="300" rx="440" ry="440" fill="url(#sglow)"/>
   <rect x="0.5" y="0.5" width="999" height="339" fill="none" stroke="#33202A"/>
 
-  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">03 — COMPONENT SCHEDULE</text>
+  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">04 — COMPONENT SCHEDULE</text>
   <text x="32" y="68" class="lbl" font-size="22" font-weight="700" fill="#F8EFF2">Stack</text>
   <text x="32" y="92" class="lbl" font-size="14" fill="#BCA0AA">what the systems above are actually built out of</text>
 

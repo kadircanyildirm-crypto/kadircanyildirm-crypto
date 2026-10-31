@@ -51,7 +51,7 @@
   <ellipse cx="140" cy="380" rx="480" ry="480" fill="url(#cglow)"/>
   <rect x="0.5" y="0.5" width="999" height="469" fill="none" stroke="#33202A"/>
 
-  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">02 — SOURCE EXCERPT</text>
+  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">03 — SOURCE EXCERPT</text>
   <text x="32" y="68" class="lbl" font-size="22" font-weight="700" fill="#F8EFF2">wardyn-ebpf / src / main.rs</text>
   <text x="32" y="92" class="lbl" font-size="14" fill="#BCA0AA">the real enforcement path: a blocked open returns EPERM before the filesystem is ever touched</text>
 

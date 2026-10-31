@@ -47,7 +47,7 @@
   <ellipse cx="190" cy="110" rx="470" ry="470" fill="url(#wglow)"/>
   <rect x="0.5" y="0.5" width="999" height="383" fill="none" stroke="#33202A"/>
 
-  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">01 — SYSTEM ARCHITECTURE</text>
+  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">02 — SYSTEM ARCHITECTURE</text>
   <text x="32" y="68" class="lbl" font-size="22" font-weight="700" fill="#F8EFF2">wardyn · Runtime Agent Containment</text>
   <text x="32" y="92" class="lbl" font-size="14" fill="#BCA0AA">every file, exec and socket an AI agent touches is judged in kernel space and refused before it lands</text>
 

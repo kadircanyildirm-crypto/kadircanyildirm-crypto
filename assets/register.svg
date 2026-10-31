@@ -24,7 +24,7 @@
   <ellipse cx="150" cy="120" rx="470" ry="470" fill="url(#rglow)"/>
   <rect x="0.5" y="0.5" width="999" height="393" fill="none" stroke="#33202A"/>
 
-  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">04 — PROJECT REGISTER</text>
+  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">05 — PROJECT REGISTER</text>
   <text x="32" y="68" class="lbl" font-size="22" font-weight="700" fill="#F8EFF2">Systems</text>
   <text x="32" y="92" class="lbl" font-size="14" fill="#BCA0AA">7 systems, all open source: links below</text>
 
