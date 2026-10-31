@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=4" alt="Kadir Can Yıldırım — Backend &amp; Systems Engineer · AI Specialist" width="100%"/>
+<img src="assets/hero.svg?v=5" alt="Kadir Can Yıldırım — Backend &amp; Systems Engineer · AI Specialist" width="100%"/>
 
-<a href="https://github.com/search?q=author%3Akadircanyildirm-crypto+is%3Apr+is%3Amerged+org%3Anasa+org%3Acvmfs&type=pullrequests"><img src="assets/upstream-band.svg?v=4" alt="Merged upstream — NASA F´ and spacewasm, CERN CernVM-FS" width="100%"/></a>
+<a href="https://github.com/search?q=author%3Akadircanyildirm-crypto+is%3Apr+is%3Amerged+org%3Anasa+org%3Acvmfs&type=pullrequests"><img src="assets/upstream-band.svg?v=5" alt="Merged upstream — NASA F´ and spacewasm, CERN CernVM-FS" width="100%"/></a>
 
-<img src="assets/status.svg?v=4" alt="Currently building wardyn" width="100%"/>
+<img src="assets/status.svg?v=5" alt="Currently building wardyn" width="100%"/>
 
 </div>
 
@@ -17,7 +17,7 @@ Backend and systems engineer, studying Software Development at Anadolu Universit
 <br/>
 
 <div align="center">
-<a href="https://doi.org/10.22541/essoar.15008581/v1"><img src="assets/paper.svg?v=4" alt="Research preprint — An Independent Evaluation of Surya's Solar Flare Forecasting: Cheap Baselines Match a 366M-Parameter Foundation Model (ESS Open Archive, 2026)" width="100%"/></a>
+<a href="https://doi.org/10.22541/essoar.15008581/v1"><img src="assets/paper.svg?v=5" alt="Research preprint — An Independent Evaluation of Surya's Solar Flare Forecasting: Cheap Baselines Match a 366M-Parameter Foundation Model (ESS Open Archive, 2026)" width="100%"/></a>
 </div>
 
 An independent evaluation of Surya, the 366M-parameter heliophysics foundation model released by NASA and IBM. I ran the released checkpoint with the authors' own inference code on 1,146 forecast hours streamed from roughly 700 GB of raw SDO data, and scored the cheap baselines the benchmark never reports: an 11-feature logistic regression over past GOES X-ray flux matches the model, and the benchmark's effective sample turns out too small to rank either. Every number in the manuscript is recomputed by `verify_paper.py` — 161 of 161 claims.
@@ -27,18 +27,12 @@ An independent evaluation of Surya, the 366M-parameter heliophysics foundation m
 <br/>
 
 <div align="center">
-<img src="assets/pipeline-wardyn.svg?v=4" alt="wardyn architecture — runtime containment for AI coding agents" width="100%"/>
+<img src="assets/pipeline-wardyn.svg?v=5" alt="wardyn architecture — runtime containment for AI coding agents" width="100%"/>
 </div>
 
 A kernel-level warden for AI coding agents. eBPF LSM hooks and tracepoints watch every file, exec and socket the agent touches, and refuse the ones policy forbids before the syscall completes — no kernel module, no agent cooperation required.
 
 **[wardyn](https://github.com/kadircanyildirm-crypto/wardyn)** · `Rust` · `AGPL-3.0` · open source
-
-<br/>
-
-<div align="center">
-<img src="assets/code.svg?v=4" alt="Source excerpt from wardyn-ebpf — the LSM file_open enforcement path" width="100%"/>
-</div>
 
 <br/>
 
@@ -53,15 +47,7 @@ A kernel-level warden for AI coding agents. eBPF LSM hooks and tracepoints watch
 <br/>
 
 <div align="center">
-<img src="assets/stack.svg?v=4" alt="Component schedule — Rust, Python, Go, Kotlin, eBPF, Kubernetes, CRDT, Ed25519, zkVM, PostgreSQL" width="100%"/>
-</div>
-
-Rust for the parts that must not fail, Python and Go for the parts that must move quickly. Everything ships containerised and orchestrated — Docker and Kubernetes, minimal egress, fault tolerance assumed rather than added later. Working is the floor; deterministic and stable at the edge of the machine's capacity is the bar.
-
-<br/>
-
-<div align="center">
-<img src="assets/register.svg?v=4" alt="Project register — seven open-source systems: wardyn, low-latency-matching-engine, quaestor, petek, heliofloor, nabd, spacewasm-crossbuild" width="100%"/>
+<img src="assets/register.svg?v=5" alt="Project register — seven open-source systems: wardyn, low-latency-matching-engine, quaestor, petek, heliofloor, nabd, spacewasm-crossbuild" width="100%"/>
 </div>
 
 From a kernel warden to an exchange matching engine, the through-line is the same: push the boundary where network optimisation meets machine learning, and keep latency and trust on the right side of it. Every one of these is public — read the code.
@@ -71,7 +57,7 @@ From a kernel warden to an exchange matching engine, the through-line is the sam
 <br/>
 
 <div align="center">
-<img src="assets/upstream.svg?v=4" alt="Upstream record — thirteen patches merged into NASA F´, NASA spacewasm and CERN CernVM-FS" width="100%"/>
+<img src="assets/upstream.svg?v=5" alt="Upstream record — thirteen patches merged into NASA F´, NASA spacewasm and CERN CernVM-FS" width="100%"/>
 </div>
 
 Thirteen patches merged into code other people's missions depend on: build-system and deployment correctness in **F´**, the NASA flight software framework flown on the Ingenuity Mars helicopter; decoder, host-interface and build fixes in **spacewasm**, NASA's flight-compliant WebAssembly interpreter; and toolchain, logging and test-suite fixes in **CernVM-FS**, the filesystem CERN uses to distribute LHC experiment software to computing sites worldwide. Reading an unfamiliar build system until the failure is obvious is the same work as reading a kernel path — only with a stricter review queue. More are in review.
@@ -90,6 +76,6 @@ I'm open to systems and infrastructure work — Rust services, kernel and networ
 
 <div align="center">
 
-<img src="assets/footer.svg?v=4" alt="Sheets 01 to 06 · revision 2026.10 · Anadolu University" width="100%"/>
+<img src="assets/footer.svg?v=5" alt="Sheets 01 to 04 · revision 2026.10 · Anadolu University" width="100%"/>
 
 </div>
