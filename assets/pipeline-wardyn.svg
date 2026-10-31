@@ -1,134 +1,123 @@
-<svg width="1000" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="wardyn architecture — runtime containment for AI coding agents">
+<svg width="1000" height="384" viewBox="0 0 1000 384" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="wardyn architecture: an agent's syscall passes through eBPF probes and the policy engine; reading src/main.rs is allowed, reading ~/.ssh/id_ed25519 is refused with EPERM">
   <defs>
     <pattern id="g1" width="28" height="28" patternUnits="userSpaceOnUse">
       <path d="M28 0H0V28" fill="none" stroke="#1D1219" stroke-width="1"/>
     </pattern>
-    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6.5" markerHeight="6.5" orient="auto">
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0 L8 4 L0 8 z" fill="#5E3746"/>
     </marker>
-    <marker id="arrowA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6.5" markerHeight="6.5" orient="auto">
-      <path d="M0 0 L8 4 L0 8 z" fill="#C81E45"/>
-    </marker>
+    <radialGradient id="wglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#C81E45" stop-opacity="0.14"/>
+      <stop offset="0.62" stop-color="#C81E45" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .lbl  { font-family:'Segoe UI',Helvetica,Arial,sans-serif; }
-      .data { font-family:'SF Mono',Consolas,'Cascadia Code',monospace; }
+      .lbl  { font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif; }
+      .data { font-family:'SF Mono',Consolas,'Cascadia Code',Menlo,monospace; }
       .node { fill:#130A10; stroke:#3E2430; stroke-width:1; }
+      .ttl  { font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif; font-size:15.5px; font-weight:700; fill:#F8EFF2; }
+      .sub  { font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif; font-size:12.5px; fill:#A88C96; }
 
-      /* Marching dashes read as data in motion; the packet dots ride the same
-         paths so the direction of flow is unambiguous. */
-      @keyframes flow     { to { stroke-dashoffset:-16; } }
-      @keyframes flowSlow { to { stroke-dashoffset:-24; } }
-      @keyframes glow     { 0%,100%{ stroke-opacity:1; } 50%{ stroke-opacity:.45; } }
-      @keyframes breathe  { 0%,100%{ opacity:.45; } 50%{ opacity:1; } }
-      @keyframes frameScan{ to { stroke-dashoffset:-2716; } }
-      @keyframes packet   { 0%{ transform:translateX(0); opacity:0; } 10%{ opacity:1; } 90%{ opacity:1; } 100%{ transform:translateX(50px); opacity:0; } }
-      @keyframes packetS  { 0%{ transform:translateX(0); opacity:0; } 10%{ opacity:1; } 90%{ opacity:1; } 100%{ transform:translateX(30px); opacity:0; } }
+      /* One story, told twice per 8 s loop. The same syscall path lights up
+         node by node; the first time the agent reads its own source and the
+         verdict is ALLOW, the second time it reaches for an SSH key and the
+         verdict is EPERM. Base attributes are the final "denied" frame, so
+         reduced-motion viewers see the point of the diagram without motion. */
+      @keyframes hit  { 0%{ opacity:0; } 6%{ opacity:1; } 42%{ opacity:1; } 62%,100%{ opacity:0; } }
+      @keyframes evA  { 0%,49.99%{ opacity:1; } 50%,100%{ opacity:0; } }
+      @keyframes evB  { 0%,49.99%{ opacity:0; } 50%,100%{ opacity:1; } }
+      @keyframes allow{ 0%,16.8%{ opacity:0; } 17%,45%{ opacity:1; } 45.2%,100%{ opacity:0; } }
+      @keyframes deny { 0%,66.8%{ opacity:0; } 67%,95%{ opacity:1; } 95.2%,100%{ opacity:0; } }
+      @keyframes idle { 0%,16.8%{ opacity:1; } 17%,45%{ opacity:0; } 45.2%,66.8%{ opacity:1; } 67%,95%{ opacity:0; } 95.2%,100%{ opacity:1; } }
 
-      .flow  { stroke-dasharray:3 5; animation: flow .9s linear infinite; }
-      .flowA { stroke-dasharray:3 5; animation: flow .7s linear infinite; }
-      .ctrl  { stroke-dasharray:1 4; animation: flowSlow 1.6s linear infinite; }
-      .active{ animation: glow 2.4s ease-in-out infinite; }
-      .frameScan { stroke-dasharray:120 2596; animation: frameScan 9s linear infinite; }
-      .reg { animation: breathe 4.5s ease-in-out infinite; }
-      .reg:nth-of-type(2){ animation-delay:1.1s; }
-      .reg:nth-of-type(3){ animation-delay:2.2s; }
-      .reg:nth-of-type(4){ animation-delay:3.3s; }
-      .p1 { fill:#5E3746; animation: packet .9s linear infinite; }
-      .p2 { fill:#5E3746; animation: packet .9s linear infinite .2s; }
-      .p3 { fill:#5E3746; animation: packet .9s linear infinite .4s; }
-      .p4 { fill:#C81E45; animation: packetS .7s linear infinite; }
-
-      .wash { animation: breathe 11s ease-in-out infinite; }
-
-
-      
-
+      .h  { animation: hit 4s ease-out infinite; }
+      .h2 { animation-delay:.45s; } .h3 { animation-delay:.9s; }
+      .h4 { animation-delay:1.35s; } .h5 { animation-delay:1.8s; }
+      .evA { animation: evA 8s linear infinite; }
+      .evB { animation: evB 8s linear infinite; }
+      .vAllow { animation: allow 8s linear infinite; }
+      .vDeny  { animation: deny 8s linear infinite; }
+      .vIdle  { animation: idle 8s linear infinite; }
 
       @media (prefers-reduced-motion: reduce) { *{ animation:none !important; } }
     </style>
-    <radialGradient id="wglow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#C81E45" stop-opacity="0.16"/>
-      <stop offset="0.62" stop-color="#C81E45" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
-  <rect width="1000" height="360" fill="#0B0709"/>
-  <rect width="1000" height="360" fill="url(#g1)"/>
-  <ellipse class="wash" cx="190" cy="110" rx="470" ry="470" fill="url(#wglow)"/>
-  <rect x="0.5" y="0.5" width="999" height="359" fill="none" stroke="#33202A"/>
-  <rect x="0.5" y="0.5" width="999" height="359" fill="none" stroke="#C81E45" stroke-width="1.5" class="frameScan" opacity="0.85"/>
+  <rect width="1000" height="384" fill="#0B0709"/>
+  <rect width="1000" height="384" fill="url(#g1)"/>
+  <ellipse cx="190" cy="110" rx="470" ry="470" fill="url(#wglow)"/>
+  <rect x="0.5" y="0.5" width="999" height="383" fill="none" stroke="#33202A"/>
 
-  <text x="32" y="38" class="data" font-size="10.5" fill="#856872" letter-spacing="3">01 — SYSTEM ARCHITECTURE</text>
-  <text x="32" y="60" class="lbl" font-size="18" font-weight="700" fill="#F8EFF2">wardyn · Runtime Agent Containment</text>
-  <text x="32" y="80" class="lbl" font-size="12" fill="#BCA0AA">every file, exec and socket an AI agent touches → judged in kernel space, refused before it lands</text>
+  <text x="32" y="40" class="data" font-size="12" fill="#9A7E88" letter-spacing="3">01 — SYSTEM ARCHITECTURE</text>
+  <text x="32" y="68" class="lbl" font-size="22" font-weight="700" fill="#F8EFF2">wardyn · Runtime Agent Containment</text>
+  <text x="32" y="92" class="lbl" font-size="14" fill="#BCA0AA">every file, exec and socket an AI agent touches is judged in kernel space and refused before it lands</text>
 
-  <g>
-    <rect x="32" y="122" width="152" height="80" class="node"/>
-    <path d="M32 122h10M32 122v10M184 122h-10M184 122v10M32 202h10M32 202v-10M184 202h-10M184 202v-10" stroke="#5E3746" stroke-width="1"/>
-    <text x="52" y="150" class="lbl" font-size="13.5" font-weight="700" fill="#F8EFF2">Coding Agent</text>
-    <text x="52" y="167" class="data" font-size="9.5" fill="#95757F">untrusted userspace</text>
-    <text x="52" y="180" class="data" font-size="9.5" fill="#95757F">open · execve · connect</text>
+  <!-- The syscall currently being traced -->
+  <text x="32" y="130" class="data" font-size="12" fill="#9A7E88" letter-spacing="2">AGENT CALLS</text>
+  <text class="evA" x="150" y="130" font-size="14" fill="#E3CDD5" opacity="0" font-family="'SF Mono',Consolas,'Cascadia Code',Menlo,monospace">openat("src/main.rs")</text>
+  <text class="evB" x="150" y="130" font-size="14" fill="#F04A6B" font-family="'SF Mono',Consolas,'Cascadia Code',Menlo,monospace">openat("~/.ssh/id_ed25519")</text>
 
-    <rect x="238" y="122" width="164" height="80" class="node"/>
-    <path d="M238 122h10M238 122v10M402 122h-10M402 122v10M238 202h10M238 202v-10M402 202h-10M402 202v-10" stroke="#5E3746" stroke-width="1"/>
-    <text x="258" y="150" class="lbl" font-size="13.5" font-weight="700" fill="#F8EFF2">eBPF Probes</text>
-    <text x="258" y="167" class="data" font-size="9.5" fill="#95757F">LSM hooks · tracepoints</text>
-    <text x="258" y="180" class="data" font-size="9.5" fill="#95757F">Aya · no kernel module</text>
+  <!-- Pipeline -->
+  <line x1="208" y1="196" x2="228" y2="196" stroke="#5E3746" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="416" y1="196" x2="436" y2="196" stroke="#5E3746" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="624" y1="196" x2="644" y2="196" stroke="#5E3746" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="816" y1="196" x2="836" y2="196" stroke="#5E3746" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-    <rect x="456" y="122" width="172" height="80" class="node"/>
-    <path d="M456 122h10M456 122v10M628 122h-10M628 122v10M456 202h10M456 202v-10M628 202h-10M628 202v-10" stroke="#5E3746" stroke-width="1"/>
-    <text x="476" y="150" class="lbl" font-size="13.5" font-weight="700" fill="#F8EFF2">Policy Engine</text>
-    <text x="476" y="167" class="data" font-size="9.5" fill="#95757F">path · argv · peer match</text>
-    <text x="476" y="180" class="data" font-size="9.5" fill="#95757F">deny by default</text>
+  <rect x="32" y="150" width="176" height="92" class="node"/>
+  <text x="48" y="180" class="ttl">Coding Agent</text>
+  <text x="48" y="204" class="sub">untrusted userspace</text>
+  <text x="48" y="222" class="sub">open · exec · connect</text>
 
-    <rect x="682" y="122" width="150" height="80" class="node"/>
-    <path d="M682 122h10M682 122v10M832 122h-10M832 122v10M682 202h10M682 202v-10M832 202h-10M832 202v-10" stroke="#5E3746" stroke-width="1"/>
-    <text x="702" y="150" class="lbl" font-size="13.5" font-weight="700" fill="#F8EFF2">Verdict</text>
-    <text x="702" y="167" class="data" font-size="9.5" fill="#95757F">allow · or EPERM</text>
-    <text x="702" y="180" class="data" font-size="9.5" fill="#95757F">decided pre-syscall</text>
+  <rect x="230" y="150" width="186" height="92" class="node"/>
+  <text x="246" y="180" class="ttl">eBPF Probes</text>
+  <text x="246" y="204" class="sub">LSM hooks · tracepoints</text>
+  <text x="246" y="222" class="sub">Aya · no kernel module</text>
 
-    <rect class="active" x="866" y="122" width="102" height="80" fill="#2B0A17" stroke="#C81E45" stroke-width="1.25"/>
-    <text x="886" y="156" class="lbl" font-size="14" font-weight="700" fill="#F9A6B7">Audit</text>
-    <text x="886" y="175" class="data" font-size="9.5" fill="#CE8493">ring buffer</text>
+  <rect x="438" y="150" width="186" height="92" class="node"/>
+  <text x="454" y="180" class="ttl">Policy Engine</text>
+  <text x="454" y="204" class="sub">path · argv · peer rules</text>
+  <text x="454" y="222" class="sub">deny by default</text>
 
-    <line class="flow" x1="184" y1="162" x2="234" y2="162" stroke="#5E3746" stroke-width="1.25" marker-end="url(#arrow)"/>
-    <line class="flow" x1="402" y1="162" x2="452" y2="162" stroke="#5E3746" stroke-width="1.25" marker-end="url(#arrow)"/>
-    <line class="flow" x1="628" y1="162" x2="678" y2="162" stroke="#5E3746" stroke-width="1.25" marker-end="url(#arrow)"/>
-    <line class="flowA" x1="832" y1="162" x2="862" y2="162" stroke="#C81E45" stroke-width="1.5" marker-end="url(#arrowA)"/>
+  <rect x="646" y="150" width="170" height="92" class="node"/>
+  <text x="662" y="180" class="ttl">Verdict</text>
+  <text class="vIdle"  x="662" y="206" font-size="15" font-weight="700" fill="#5E3746" opacity="0" font-family="'SF Mono',Consolas,'Cascadia Code',Menlo,monospace">· · ·</text>
+  <text class="vAllow" x="662" y="206" font-size="15" font-weight="700" fill="#F8EFF2" opacity="0" font-family="'SF Mono',Consolas,'Cascadia Code',Menlo,monospace">ALLOW</text>
+  <text class="vDeny"  x="662" y="206" font-size="15" font-weight="700" fill="#F04A6B" font-family="'SF Mono',Consolas,'Cascadia Code',Menlo,monospace">EPERM</text>
+  <text x="662" y="226" class="sub">before the syscall runs</text>
 
-    <circle class="p1" cx="184" cy="162" r="2.2"/>
-    <circle class="p2" cx="402" cy="162" r="2.2"/>
-    <circle class="p3" cx="628" cy="162" r="2.2"/>
-    <circle class="p4" cx="832" cy="162" r="2.4"/>
+  <rect x="838" y="150" width="130" height="92" fill="#2B0A17" stroke="#C81E45" stroke-width="1.25"/>
+  <text x="854" y="180" class="ttl" style="fill:#F9A6B7">Audit</text>
+  <text x="854" y="204" class="sub" style="fill:#CE8493">ring buffer</text>
+  <text x="854" y="222" class="sub" style="fill:#CE8493">every decision</text>
+
+  <!-- Path highlight: lights each stage in turn -->
+  <g fill="none" stroke="#F04A6B" stroke-width="2">
+    <rect class="h"    x="32"  y="150" width="176" height="92" opacity="0"/>
+    <rect class="h h2" x="230" y="150" width="186" height="92" opacity="0"/>
+    <rect class="h h3" x="438" y="150" width="186" height="92" opacity="0"/>
+    <rect class="h h4" x="646" y="150" width="170" height="92" opacity="0"/>
+    <rect class="h h5" x="838" y="150" width="130" height="92" opacity="0"/>
   </g>
+  <rect class="vDeny" x="646" y="150" width="170" height="92" fill="#C81E45" fill-opacity="0.14" stroke="#F04A6B" stroke-width="2"/>
 
-  <g>
-    <rect x="238" y="256" width="164" height="66" class="node"/>
-    <text x="258" y="282" class="lbl" font-size="12.5" font-weight="700" fill="#EBD9E0">Kernel Boundary</text>
-    <text x="258" y="300" class="data" font-size="9.5" fill="#95757F">agent cannot reach past it</text>
-    <path class="ctrl" d="M320 256 C320 234 400 210 452 194" fill="none" stroke="#743E50" stroke-width="1"/>
+  <!-- Control plane: governs the pipeline, carries no data -->
+  <line x1="323" y1="286" x2="323" y2="246" stroke="#743E50" stroke-width="1.25" stroke-dasharray="2 4"/>
+  <line x1="531" y1="286" x2="531" y2="246" stroke="#743E50" stroke-width="1.25" stroke-dasharray="2 4"/>
 
-    <rect x="456" y="256" width="172" height="66" class="node"/>
-    <text x="476" y="282" class="lbl" font-size="12.5" font-weight="700" fill="#EBD9E0">Hot Ruleset Reload</text>
-    <text x="476" y="300" class="data" font-size="9.5" fill="#95757F">swap policy, no restart</text>
-    <path class="ctrl" d="M542 256 C542 236 600 214 678 196" fill="none" stroke="#743E50" stroke-width="1"/>
+  <rect x="230" y="286" width="186" height="66" class="node"/>
+  <text x="246" y="313" class="lbl" font-size="14.5" font-weight="700" fill="#EBD9E0">Kernel Boundary</text>
+  <text x="246" y="334" class="sub">agent cannot reach past it</text>
 
-    <text x="32" y="296" class="data" font-size="9.5" fill="#6F5762">— — — control / governs, not data flow</text>
-  </g>
+  <rect x="438" y="286" width="186" height="66" class="node"/>
+  <text x="454" y="313" class="lbl" font-size="14.5" font-weight="700" fill="#EBD9E0">Hot Ruleset Reload</text>
+  <text x="454" y="334" class="sub">swap policy, no restart</text>
 
-  <g>
-    <rect x="782" y="308" width="186" height="42" fill="none" stroke="#33202A" stroke-width="1"/>
-    <line x1="782" y1="322" x2="968" y2="322" stroke="#33202A" stroke-width="1"/>
-    <text x="790" y="318" class="data" font-size="9" fill="#856872">DWG NO.</text>
-    <text x="960" y="318" class="data" font-size="9" fill="#BCA0AA" text-anchor="end">KC-010</text>
-    <text x="790" y="336" class="data" font-size="9" fill="#856872">SYSTEM</text>
-    <text x="960" y="336" class="data" font-size="9" fill="#BCA0AA" text-anchor="end">WARDYN · REV 07.26</text>
-  </g>
+  <line x1="32" y1="319" x2="62" y2="319" stroke="#743E50" stroke-width="1.25" stroke-dasharray="2 4"/>
+  <text x="70" y="323" class="sub" style="fill:#8A6F79">control, not data</text>
 
-  <g stroke="#5E3746" stroke-width="1.25">
-    <path class="reg" d="M20 12 h14 M12 20 v14" fill="none"/>
-    <path class="reg" d="M980 12 h-14 M988 20 v14" fill="none"/>
-    <path class="reg" d="M20 348 h14 M12 340 v-14" fill="none"/>
-    <path class="reg" d="M980 348 h-14 M988 340 v-14" fill="none"/>
+  <g stroke="#5E3746" stroke-width="1.25" fill="none">
+    <path d="M20 12 h14 M12 20 v14"/>
+    <path d="M980 12 h-14 M988 20 v14"/>
+    <path d="M20 372 h14 M12 364 v-14"/>
+    <path d="M980 372 h-14 M988 364 v-14"/>
   </g>
 </svg>

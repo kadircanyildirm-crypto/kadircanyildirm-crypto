@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=2" alt="Kadir Can Yıldırım — Backend &amp; Systems Engineer · AI Specialist" width="100%"/>
+<img src="assets/hero.svg?v=3" alt="Kadir Can Yıldırım — Backend &amp; Systems Engineer · AI Specialist" width="100%"/>
 
-<img src="assets/status.svg" alt="Currently building wardyn" width="100%"/>
+<a href="https://github.com/search?q=author%3Akadircanyildirm-crypto+is%3Apr+is%3Amerged+org%3Anasa+org%3Acvmfs&type=pullrequests"><img src="assets/upstream-band.svg?v=3" alt="Merged upstream — NASA F´ and spacewasm, CERN CernVM-FS" width="100%"/></a>
+
+<img src="assets/status.svg?v=3" alt="Currently building wardyn" width="100%"/>
 
 </div>
 
@@ -15,7 +17,7 @@ Backend and systems engineer, studying Software Development at Anadolu Universit
 <br/>
 
 <div align="center">
-<img src="assets/pipeline-wardyn.svg" alt="wardyn architecture — runtime containment for AI coding agents" width="100%"/>
+<img src="assets/pipeline-wardyn.svg?v=3" alt="wardyn architecture — runtime containment for AI coding agents" width="100%"/>
 </div>
 
 A kernel-level warden for AI coding agents. eBPF LSM hooks and tracepoints watch every file, exec and socket the agent touches, and refuse the ones policy forbids before the syscall completes — no kernel module, no agent cooperation required.
@@ -25,7 +27,7 @@ A kernel-level warden for AI coding agents. eBPF LSM hooks and tracepoints watch
 <br/>
 
 <div align="center">
-<img src="assets/code.svg" alt="Source excerpt from wardyn-ebpf — the LSM file_open enforcement path" width="100%"/>
+<img src="assets/code.svg?v=3" alt="Source excerpt from wardyn-ebpf — the LSM file_open enforcement path" width="100%"/>
 </div>
 
 <br/>
@@ -41,7 +43,7 @@ A kernel-level warden for AI coding agents. eBPF LSM hooks and tracepoints watch
 <br/>
 
 <div align="center">
-<img src="assets/stack.svg" alt="Component schedule — Rust, Python, Go, Kotlin, eBPF, Kubernetes, CRDT, Ed25519, zkVM, PostgreSQL" width="100%"/>
+<img src="assets/stack.svg?v=3" alt="Component schedule — Rust, Python, Go, Kotlin, eBPF, Kubernetes, CRDT, Ed25519, zkVM, PostgreSQL" width="100%"/>
 </div>
 
 Rust for the parts that must not fail, Python and Go for the parts that must move quickly. Everything ships containerised and orchestrated — Docker and Kubernetes, minimal egress, fault tolerance assumed rather than added later. Working is the floor; deterministic and stable at the edge of the machine's capacity is the bar.
@@ -49,22 +51,24 @@ Rust for the parts that must not fail, Python and Go for the parts that must mov
 <br/>
 
 <div align="center">
-<img src="assets/register.svg" alt="Project register — ten systems, one open source, nine private" width="100%"/>
+<img src="assets/register.svg?v=3" alt="Project register — seven open-source systems: wardyn, low-latency-matching-engine, quaestor, petek, heliofloor, nabd, spacewasm-crossbuild" width="100%"/>
 </div>
 
-From explainable-AI middleware to UDP-based WAN file transfer, the through-line is the same: push the boundary where network optimisation meets machine learning, and keep latency and trust on the right side of it.
+From a kernel warden to an exchange matching engine, the through-line is the same: push the boundary where network optimisation meets machine learning, and keep latency and trust on the right side of it. Every one of these is public — read the code.
+
+**[wardyn](https://github.com/kadircanyildirm-crypto/wardyn)** · **[low-latency-matching-engine](https://github.com/kadircanyildirm-crypto/low-latency-matching-engine)** · **[quaestor](https://github.com/kadircanyildirm-crypto/quaestor)** · **[petek](https://github.com/kadircanyildirm-crypto/petek)** · **[heliofloor](https://github.com/kadircanyildirm-crypto/heliofloor)** · **[nabd](https://github.com/kadircanyildirm-crypto/nabd)** · **[spacewasm-crossbuild](https://github.com/kadircanyildirm-crypto/spacewasm-crossbuild)**
 
 <br/>
 
 <div align="center">
-<img src="assets/upstream.svg" alt="Upstream record — eight patches merged into NASA F´, NASA spacewasm and CERN CernVM-FS" width="100%"/>
+<img src="assets/upstream.svg?v=3" alt="Upstream record — thirteen patches merged into NASA F´, NASA spacewasm and CERN CernVM-FS" width="100%"/>
 </div>
 
-Eight patches merged into code other people's missions depend on: build-system correctness in **F´**, the NASA flight software framework flown on the Ingenuity Mars helicopter; host-interface and build fixes in **spacewasm**, NASA's flight-compliant WebAssembly interpreter; and a toolchain-discovery fix in **CernVM-FS**, the filesystem CERN uses to distribute LHC experiment software to computing sites worldwide. Reading an unfamiliar build system until the failure is obvious is the same work as reading a kernel path — only with a stricter review queue. More are in review.
+Thirteen patches merged into code other people's missions depend on: build-system and deployment correctness in **F´**, the NASA flight software framework flown on the Ingenuity Mars helicopter; decoder, host-interface and build fixes in **spacewasm**, NASA's flight-compliant WebAssembly interpreter; and toolchain, logging and test-suite fixes in **CernVM-FS**, the filesystem CERN uses to distribute LHC experiment software to computing sites worldwide. Reading an unfamiliar build system until the failure is obvious is the same work as reading a kernel path — only with a stricter review queue. More are in review.
 
-**[nasa/fprime](https://github.com/nasa/fprime)** · [#5590](https://github.com/nasa/fprime/pull/5590) · [#5576](https://github.com/nasa/fprime/pull/5576) · [#5571](https://github.com/nasa/fprime/pull/5571) · [#5559](https://github.com/nasa/fprime/pull/5559)<br/>
-**[nasa/spacewasm](https://github.com/nasa/spacewasm)** · [#154](https://github.com/nasa/spacewasm/pull/154) · [#153](https://github.com/nasa/spacewasm/pull/153) · [#152](https://github.com/nasa/spacewasm/pull/152)<br/>
-**[cvmfs/cvmfs](https://github.com/cvmfs/cvmfs)** · [#4392](https://github.com/cvmfs/cvmfs/pull/4392)
+**[nasa/fprime](https://github.com/nasa/fprime)** · [#5675](https://github.com/nasa/fprime/pull/5675) · [#5590](https://github.com/nasa/fprime/pull/5590) · [#5576](https://github.com/nasa/fprime/pull/5576) · [#5571](https://github.com/nasa/fprime/pull/5571) · [#5559](https://github.com/nasa/fprime/pull/5559)<br/>
+**[nasa/spacewasm](https://github.com/nasa/spacewasm)** · [#190](https://github.com/nasa/spacewasm/pull/190) · [#154](https://github.com/nasa/spacewasm/pull/154) · [#153](https://github.com/nasa/spacewasm/pull/153) · [#152](https://github.com/nasa/spacewasm/pull/152)<br/>
+**[cvmfs/cvmfs](https://github.com/cvmfs/cvmfs)** · [#4407](https://github.com/cvmfs/cvmfs/pull/4407) · [#4396](https://github.com/cvmfs/cvmfs/pull/4396) · [#4392](https://github.com/cvmfs/cvmfs/pull/4392) · **[cvmfs/doc-cvmfs](https://github.com/cvmfs/doc-cvmfs)** · [#265](https://github.com/cvmfs/doc-cvmfs/pull/265)
 
 <br/>
 
@@ -76,8 +80,6 @@ I'm open to systems and infrastructure work — Rust services, kernel and networ
 
 <div align="center">
 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=kadircanyildirm-crypto.readme&title=PROFILE%20VIEWS&left_color=%231D1219&right_color=%23C81E45" alt="Profile views" height="30"/>
-
-<img src="assets/footer.svg" alt="Drawing set KC-001 to KC-050 · revision 2026.08 · Anadolu University" width="100%"/>
+<img src="assets/footer.svg?v=3" alt="Sheets 01 to 05 · revision 2026.10 · Anadolu University" width="100%"/>
 
 </div>
